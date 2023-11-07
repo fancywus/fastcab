@@ -1,0 +1,5 @@
+Feign:
+  httpclient:
+    enabled: true
+    max-connections: 200 #最大连接数
+    max-connections-per-route: 50 #请求分配最大连接数

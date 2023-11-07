@@ -1,0 +1,26 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /user-service
+# DataSource Config
+spring:
+  datasource:
+    #使用docker部署微服务，需要改成容器名称
+    url: jdbc:mysql://localhost:3306/fastcab?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&useSSL=false&serverTimezone=GMT%2B8
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  application:
+    name: user-service
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848 #nacos的地址
+  #找不到模板位置(s):[类路径:/模板/](请添加一些模板,检查你的FreeMarker配置,或一组spring.freemarker.checkTemplateLocation = false)
+  freemarker:
+    check-template-location: false
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher

@@ -1,0 +1,10 @@
+#定义gateway网关接口
+server:
+  port: 10010
+#定义应用名称，将gateway注册到nacos上
+spring:
+  application:
+    name: gateway
+#  cloud:
+#    nacos:
+#      server-addr: localhost:8848 #nacos的地址
